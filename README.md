@@ -8,10 +8,14 @@ Please contact wmtan@fudan.edu.cn or byan@fudan.edu.cn if you hace any questions
 ## Install environment
 1. Create environment with conda:
    ```
-    conda create -n indivfound python=3.11.0
+   git clone https://github.com/Zhen812/IndivFound/
+   cd IndivFound
+   conda env create --file environment.yml
+2. Activate environment:
+   ```
+   conda activate indivfound
 3. Install dependencies：
    ```
-    conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 pytorch-cuda=12.1 -c pytorch -c nvidia
-    git clone https://github.com/Zhen812/IndivFound/
-    cd IndivFound
-    pip install -r requirements.txt
+   pip install -r requirements.txt
+## Data & model availability
+See Benchmark.md.
