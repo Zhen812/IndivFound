@@ -1,0 +1,83 @@
+num_negatives: 20
+temp: 0.1
+
+anno_path: "to be updated"
+sata_dir: "to be updated"
+found_model_ckpts:
+  autonomicAging2ECGID: [
+      "ckpt of fold 0, to be updated",
+      "ckpt of fold 1, to be updated",
+      "ckpt of fold 2, to be updated",
+      "ckpt of fold 3, to be updated",
+      "ckpt of fold 4, to be updated",
+  ]
+cls_model_ckpts:
+  autonomicAging2ECGID: [
+      "ckpt of fold 0, to be updated",
+      "ckpt of fold 1, to be updated",
+      "ckpt of fold 2, to be updated",
+      "ckpt of fold 3, to be updated",
+      "ckpt of fold 4, to be updated",
+  ]
+
+video:
+  width: 224
+  height: 224
+  length: 0
+  channel: 3
+  tubelet_size: 2
+  patch_size: 16
+
+eeg:
+  eeg_width: 9
+  eeg_height: 9
+  eeg_length: 0
+  eeg_channel: 1
+  eeg_tubelet_size: 200
+  eeg_patch_size: 1
+
+ecg:
+  ecg_length: 3840
+  ecg_channel: 2
+  ecg_tubelet_size: 128
+
+eog:
+  eog_length: 0
+  eog_channel: 2
+  eog_tubelet_size: 128
+
+emg:
+  emg_length: 0
+  emg_channel: 1
+  emg_tubelet_size: 128
+
+gsr:
+  gsr_length: 0
+  gsr_channel: 1
+  gsr_tubelet_size: 128
+
+encoder:
+  embed_dim: 768
+  encoder_depth: 12
+  modality_specific_depth: 8
+  num_heads: 12
+
+decoder:
+  decoder_embed_dim: 512
+  decoder_depth: 4
+  decoder_num_heads: 16
+
+mlp_ratio: 4.
+norm_layer: nn.LayerNorm
+tr_pos: False
+
+num_classes: 2
+model_save_root: "/data/user4/program/MultiMAE/saved_models/downstreams/demographics/Age-ECG/ecg"
+epochs: 100
+save_interval: 10
+lr: 0.0001
+oprim: "adam"
+norm_pix_loss: False
+batch_size: 2
+num_workers: 4
+
